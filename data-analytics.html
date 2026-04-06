@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analytics Learning | Hussmann Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#1a6ebd; --dark:#0f4a82; --bg:#f7f8fa; --white:#fff;
+  --radius:10px; --shadow:0 16px 40px rgba(0,0,0,.15);
+}
+body { margin:0; font-family:Barlow,sans-serif; background:var(--bg); color:#1e2533; }
+a { text-decoration:none; color:inherit; }
+
+.container { max-width:1140px; margin:auto; padding:0 24px 64px; }
+
+/* HERO */
+.hero {
+  height:420px;
+  border-radius:var(--radius);
+  background:url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&fit=crop") center/cover;
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.hero::before {
+  content:""; inset:0; position:absolute;
+  background:linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.8));
+}
+.hero-content {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  justify-content:center; align-items:flex-end;
+  padding:48px; max-width:520px; margin-left:auto;
+  color:#fff; text-align:right;
+}
+.hero h1 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:52px; font-weight:800; line-height:1;
+}
+.hero p { font-size:15px; opacity:.85; margin:16px 0 28px; }
+.hero .cta {
+  background:var(--blue); padding:14px 30px;
+  font-weight:700; letter-spacing:2px;
+  border-radius:4px; text-transform:uppercase;
+}
+
+/* SECTION */
+.section { margin-top:56px; }
+.section h2 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:28px; font-weight:800; margin-bottom:20px;
+}
+
+/* PATHWAYS */
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.card {
+  background:#fff; border-radius:var(--radius);
+  padding:24px; box-shadow:0 6px 22px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,.15); }
+.card h3 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:22px; font-weight:700;
+}
+.card p { font-size:13px; opacity:.8; margin:10px 0 18px; }
+.card .card-cta {
+  font-size:12px; letter-spacing:1.5px;
+  font-weight:700; color:var(--blue);
+  text-transform:uppercase;
+}
+
+/* SKILLS */
+.skills { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+.skill {
+  background:#fff; border-radius:10px;
+  padding:18px; text-align:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .grid { grid-template-columns:1fr 1fr; }
+  .skills { grid-template-columns:1fr 1fr 1fr; }
+}
+@media(max-width:560px) {
+  .hero { height:300px; }
+  .hero h1 { font-size:34px; }
+  .grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Data Analytics<br>Mastery</h1>
+      <p>
+        Learn to turn data into insights. From SQL and Power BI
+        to Python and advanced analytics — build skills that
+        drive decisions.
+      </p>
+      <a class="cta" target="_blank"
+         href="https://hussmanninstitute.panasonicacademy.com/learn/catalog">
+         Explore Analytics Courses →
+      </a>
+    </div>
+  </div>
+
+  <!-- PATHWAYS -->
+  <div class="section">
+    <h2>Analytics Learning Pathways</h2>
+    <div class="grid">
+      <a class="card" target="_blank"
+         href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans">
+        <h3>Foundations of Analytics</h3>
+        <p>Data literacy, basic statistics, Excel, SQL fundamentals.</p>
+        <span class="card-cta">Start Path →</span>
+      </a>
+      <a class="card" target="_blank"
+         href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans">
+        <h3>Business Intelligence</h3>
+        <p>Power BI, dashboards, data storytelling, reporting best practices.</p>
+        <span class="card-cta">Explore BI →</span>
+      </a>
+      <a class="card" target="_blank"
+         href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans">
+        <h3>Advanced Analytics</h3>
+        <p>Python, predictive analytics, automation & insights at scale.</p>
+        <span class="card-cta">Advance Skills →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Tools & Skills You’ll Build</h2>
+    <div class="skills">
+      <div class="skill">Power BI</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Excel</div>
+      <div class="skill">Python</div>
+      <div class="skill">Statistics</div>
+      <div class="skill">Data Visualization</div>
+      <div class="skill">Dashboards</div>
+      <div class="skill">Data Modeling</div>
+      <div class="skill">Business Insights</div>
+      <div class="skill">Storytelling</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
