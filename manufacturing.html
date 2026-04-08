@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing & Operations | Hussmann Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#1a6ebd;
+  --bg:#f7f8fa;
+  --radius:10px;
+  --shadow:0 16px 40px rgba(0,0,0,.15);
+}
+
+body {
+  margin:0;
+  font-family:Barlow,sans-serif;
+  background:var(--bg);
+  color:#1e2533;
+}
+
+a { text-decoration:none; color:inherit; }
+
+.container {
+  max-width:1140px;
+  margin:auto;
+  padding:0 24px 64px;
+}
+
+/* HERO */
+.hero {
+  height:420px;
+  border-radius:var(--radius);
+  background:url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80&fit=crop")
+    center / cover no-repeat;
+  position:relative;
+  box-shadow:var(--shadow);
+}
+
+.hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.85)
+  );
+}
+
+.hero-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-end;
+  padding:48px;
+  max-width:520px;
+  margin-left:auto;
+  color:#fff;
+  text-align:right;
+}
+
+.hero h1 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:52px;
+  font-weight:800;
+  line-height:1.05;
+}
+
+.hero p {
+  font-size:15px;
+  opacity:.85;
+  margin:16px 0 28px;
+}
+
+.cta {
+  background:var(--blue);
+  padding:14px 30px;
+  font-weight:700;
+  letter-spacing:2px;
+  border-radius:4px;
+  text-transform:uppercase;
+  color:#fff;
+}
+
+/* SECTIONS */
+.section {
+  margin-top:56px;
+}
+
+.section h2 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+/* PATHWAYS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.card {
+  background:#fff;
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 6px 22px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(0,0,0,.15);
+}
+
+.card h3 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:22px;
+  font-weight:700;
+}
+
+.card p {
+  font-size:13px;
+  opacity:.8;
+  margin:10px 0 18px;
+}
+
+.card-cta {
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:700;
+  color:var(--blue);
+  text-transform:uppercase;
+}
+
+/* SKILLS */
+.skills {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+
+.skill {
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  text-align:center;
+  font-weight:600;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .grid { grid-template-columns:1fr 1fr; }
+  .skills { grid-template-columns:1fr 1fr 1fr; }
+}
+
+@media(max-width:560px) {
+  .hero { height:300px; }
+  .hero h1 { font-size:34px; }
+  .grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Manufacturing &<br>Operations Excellence</h1>
+      <p>
+        Strengthen manufacturing capability through operational
+        discipline, quality systems, safety, and continuous
+        improvement practices.
+      </p>
+      <a class="cta" href="https://hussmanninstitute.panasonicacademy.com/learn/catalog" target="_blank">
+        Explore Manufacturing Courses →
+      </a>
+    </div>
+  </div>
+
+  <!-- PATHWAYS -->
+  <div class="section">
+    <h2>Manufacturing Learning Pathways</h2>
+    <div class="grid">
+
+      <a class="card" href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans" target="_blank">
+        <h3>Manufacturing Foundations</h3>
+        <p>Shop‑floor basics, safety, quality awareness, standard work.</p>
+        <span class="card-cta">Start Path →</span>
+      </a>
+
+      <a class="card" href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans" target="_blank">
+        <h3>Operational Excellence</h3>
+        <p>Lean, Six Sigma, problem‑solving, productivity improvements.</p>
+        <span class="card-cta">Drive Excellence →</span>
+      </a>
+
+      <a class="card" href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans" target="_blank">
+        <h3>Advanced Manufacturing</h3>
+        <p>Automation, maintenance excellence, digital manufacturing.</p>
+        <span class="card-cta">Advance Skills →</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Manufacturing Skills You’ll Build</h2>
+    <div class="skills">
+      <div class="skill">Production Systems</div>
+      <div class="skill">Quality Management</div>
+      <div class="skill">Safety & Compliance</div>
+      <div class="skill">Lean Manufacturing</div>
+      <div class="skill">Six Sigma</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Maintenance</div>
+      <div class="skill">Process Improvement</div>
+      <div class="skill">Operational KPIs</div>
+      <div class="skill">Digital Manufacturing</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+``
