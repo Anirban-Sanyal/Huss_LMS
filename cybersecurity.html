@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cybersecurity Learning | Hussmann Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#1a6ebd;
+  --dark:#0f4a82;
+  --bg:#f7f8fa;
+  --white:#ffffff;
+  --radius:10px;
+  --shadow:0 16px 40px rgba(0,0,0,.15);
+}
+
+body {
+  margin:0;
+  font-family:Barlow,sans-serif;
+  background:var(--bg);
+  color:#1e2533;
+}
+
+a { text-decoration:none; color:inherit; }
+
+.container {
+  max-width:1140px;
+  margin:auto;
+  padding:0 24px 64px;
+}
+
+/* HERO */
+.hero {
+  height:420px;
+  border-radius:var(--radius);
+  background:url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80&fit=crop")
+    center/cover no-repeat;
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.85)
