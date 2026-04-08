@@ -51,3 +51,188 @@ a { text-decoration:none; color:inherit; }
     to right,
     rgba(0,0,0,.25),
     rgba(0,0,0,.85)
+  );
+}
+
+.hero-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-end;
+  padding:48px;
+  max-width:520px;
+  margin-left:auto;
+  color:#fff;
+  text-align:right;
+}
+
+.hero h1 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:52px;
+  font-weight:800;
+  line-height:1.05;
+}
+
+.hero p {
+  font-size:15px;
+  opacity:.85;
+  margin:16px 0 28px;
+}
+
+.hero .cta {
+  background:var(--blue);
+  padding:14px 30px;
+  font-weight:700;
+  letter-spacing:2px;
+  border-radius:4px;
+  text-transform:uppercase;
+  color:#fff;
+}
+
+/* SECTIONS */
+.section {
+  margin-top:56px;
+}
+
+.section h2 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+/* PATHWAYS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.card {
+  background:#fff;
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 6px 22px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(0,0,0,.15);
+}
+
+.card h3 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:22px;
+  font-weight:700;
+}
+
+.card p {
+  font-size:13px;
+  opacity:.8;
+  margin:10px 0 18px;
+}
+
+.card .card-cta {
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:700;
+  color:var(--blue);
+  text-transform:uppercase;
+}
+
+/* SKILLS */
+.skills {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+
+.skill {
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  text-align:center;
+  font-weight:600;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .grid { grid-template-columns:1fr 1fr; }
+  .skills { grid-template-columns:1fr 1fr 1fr; }
+}
+
+@media(max-width:560px) {
+  .hero { height:300px; }
+  .hero h1 { font-size:34px; }
+  .grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Cybersecurity<br>Resilience</h1>
+      <p>
+        Protect systems, data, and operations. Build skills in
+        cyber risk, OT security, compliance, and incident response
+        tailored for modern manufacturing.
+      </p>
+https://hussmanninstitute.panasonicacademy.com/learn/catalog
+        Explore Cybersecurity Courses →
+      </a>
+    </div>
+  </div>
+
+  <!-- PATHWAYS -->
+  <div class="section">
+    <h2>Cybersecurity Learning Pathways</h2>
+    <div class="grid">
+https://hussmanninstitute.panasonicacademy.com/learn/learning-plans
+        <h3>Cybersecurity Foundations</h3>
+        <p>Threat awareness, cyber hygiene, security fundamentals.</p>
+        <span class="card-cta">Start Path →</span>
+      </a>
+
+https://hussmanninstitute.panasonicacademy.com/learn/learning-plans
+        <h3>OT & Manufacturing Security</h3>
+        <p>ICS, OT risk, industrial networks, plant‑level protection.</p>
+        <span class="card-cta">Explore OT Security →</span>
+      </a>
+
+https://hussmanninstitute.panasonicacademy.com/learn/learning-plans
+        <h3>Advanced & Compliance</h3>
+        <p>Incident response, governance, audits, regulatory readiness.</p>
+        <span class="card-cta">Advance Skills →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Cybersecurity Skills You’ll Build</h2>
+    <div class="skills">
+      <div class="skill">Cyber Awareness</div>
+      <div class="skill">Threat Detection</div>
+      <div class="skill">Incident Response</div>
+      <div class="skill">OT / ICS Security</div>
+      <div class="skill">Risk Management</div>
+      <div class="skill">IAM</div>
+      <div class="skill">Network Security</div>
+      <div class="skill">Compliance</div>
+      <div class="skill">Data Protection</div>
+      <div class="skill">Security Governance</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
