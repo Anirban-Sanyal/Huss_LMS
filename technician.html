@@ -8,87 +8,267 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body { margin:0; font-family:Barlow,sans-serif; background:#f7f8fa; }
-.container { max-width:1140px; margin:auto; padding:0 24px 64px; }
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  background: #f7f8fa;
+  color: #1e2533;
+}
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* ---------- HERO ---------- */
 .hero {
-  height:420px;
-  background:url('./Technician_image.jpg') center/cover;
-  position:relative; border-radius:12px;
+  height: 420px;
+  background: url('./Technician.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
 }
+
 .hero::before {
-  content:""; inset:0; position:absolute;
-  background:linear-gradient(to right, rgba(0,0,0,.3), rgba(0,0,0,.85));
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.85)
+  );
 }
+
 .hero-content {
-  position:absolute; inset:0; display:flex;
-  flex-direction:column; justify-content:center;
-  align-items:flex-end; padding:48px; color:#fff; text-align:right;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 48px;
+  max-width: 520px;
+  margin-left: auto;
+  color: #fff;
+  text-align: right;
 }
+
 .hero h1 {
-  font-family:"Barlow Condensed",sans-serif;
-  font-size:52px; font-weight:800;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.05;
 }
-.section { margin-top:56px; }
-.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-.card { background:#fff; padding:24px; border-radius:10px; }
+
+.hero p {
+  font-size: 15px;
+  opacity: 0.85;
+  margin: 16px 0 28px;
+}
+
+.hero .cta {
+  background: #1a6ebd;
+  padding: 14px 30px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* ---------- SECTION ---------- */
+.section {
+  margin-top: 56px;
+}
+
+.section h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* ---------- DOMAIN CARDS (same as homepage) ---------- */
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.domain-card {
+  position: relative;
+  height: 215px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.domain-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.domain-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.55s ease;
+}
+
+.domain-card:hover .domain-card-bg {
+  transform: scale(1.08);
+}
+
+.domain-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.88) 0%,
+    rgba(0,0,0,0.48) 45%,
+    rgba(0,0,0,0.12) 100%
+  );
+}
+
+.domain-card-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px 20px;
+  color: #fff;
+}
+
+.domain-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.domain-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.domain-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.domain-cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.18);
+  padding: 4px 12px;
+  border-radius: 3px;
+}
+
+/* ---------- TECHNICIAN CARD IMAGES ---------- */
+.domain-card.equipment .domain-card-bg {
+  background-image: url('./Technician.jpg');
+}
+
+.domain-card.maintenance .domain-card-bg {
+  background-image: url('https://images.unsplash.com/photo-1581091215367-59ab6c9f7b1f?w=800&q=80&fit=crop');
+}
+
+.domain-card.safety .domain-card-bg {
+  background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&fit=crop');
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .domain-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .hero { height: 300px; }
+  .hero h1 { font-size: 34px; }
+  .domain-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 
 <body>
 <div class="container">
 
+  <!-- HERO -->
   <div class="hero">
-   <div class="hero-content">
-  <h1>Technician<br>Training</h1>
-  <p>
-    Hands‑on training for field and service technicians
-    focused on troubleshooting, maintenance, and safety.
-  </p>
+    <div class="hero-content">
+      <h1>Technician<br>Training</h1>
+      <p>
+        Hands‑on training for field and service technicians focused on
+        equipment diagnostics, maintenance, and safety excellence.
+      </p>
+      <a class="cta" href="https://hussmanninstitute.panasonicacademy.com/learn/catalog" target="_blank">
+        Explore Technician Courses →
+      </a>
+    </div>
+  </div>
 
-  <a
-    href="https://hussmanninstitute.panasonicacademy.com/learn/catalog"
-    class="cta"
-    target="_blank">
-    Explore Technician Courses →
-  </a>
-</div>
-</div>
-
+  <!-- TECHNICIAN DOMAINS -->
   <div class="section">
     <h2>Technician Learning Areas</h2>
-    <div class="grid">
-      
-<a
-  href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans"
-  class="card"
-  target="_blank">
 
-  <h3>Equipment & Systems</h3>
-  <p>Refrigeration systems, components, diagnostics.</p>
-  <span class="card-cta">View Courses →</span>
-</a>
+    <div class="domain-grid">
 
-      
-<a
-  href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans"
-  class="card"
-  target="_blank">
+      <a class="domain-card equipment" href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans" target="_blank">
+        <div class="domain-card-bg"></div>
+        <div class="domain-card-overlay"></div>
+        <div class="domain-card-body">
+          <div class="domain-icon">🧰</div>
+          <div class="domain-name">Equipment & Systems</div>
+          <div class="domain-meta">
+            <span>Components & Diagnostics</span>
+            <span class="domain-cta">Explore →</span>
+          </div>
+        </div>
+      </a>
 
-  <h3>Maintenance & Troubleshooting</h3>
-  <p>Preventive maintenance, fault isolation, repair.</p>
-  <span class="card-cta">Start Training →</span>
-</a>
+      <a class="domain-card maintenance" href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans" target="_blank">
+        <div class="domain-card-bg"></div>
+        <div class="domain-card-overlay"></div>
+        <div class="domain-card-body">
+          <div class="domain-icon">🔧</div>
+          <div class="domain-name">Maintenance & Troubleshooting</div>
+          <div class="domain-meta">
+            <span>Preventive & Reactive</span>
+            <span class="domain-cta">Start →</span>
+          </div>
+        </div>
+      </a>
 
-     
-<a
-  href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans"
-  class="card"
-  target="_blank">
-
-  <h3>Safety & Compliance</h3>
-  <p>Electrical safety, compliance, best practices.</p>
-  <span class="card-cta">Learn More →</span>
-</a>
+      <a class="domain-card safety" href="https://hussmanninstitute.panasonicacademy.com/learn/learning-plans" target="_blank">
+        <div class="domain-card-bg"></div>
+        <div class="domain-card-overlay"></div>
+        <div class="domain-card-body">
+          <div class="domain-icon">⚠️</div>
+          <div class="domain-name">Annual Safety Traning</div>
+          <div class="domain-meta">
+            <span>Electrical & Standards</span>
+            <span class="domain-cta">Start →</span>
+          </div>
+        </div>
+      </a>
 
     </div>
   </div>
