@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technician Training | Hussmann Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body { margin:0; font-family:Barlow,sans-serif; background:#f7f8fa; }
+.container { max-width:1140px; margin:auto; padding:0 24px 64px; }
+.hero {
+  height:420px;
+  background:url('https://images.unsplash.com/photo-1581092334510-47b1d8aef1d3?w=1600&q=80&fit=crop') center/cover;
+  position:relative; border-radius:12px;
+}
+.hero::before {
+  content:""; inset:0; position:absolute;
+  background:linear-gradient(to right, rgba(0,0,0,.3), rgba(0,0,0,.85));
+}
+.hero-content {
+  position:absolute; inset:0; display:flex;
+  flex-direction:column; justify-content:center;
+  align-items:flex-end; padding:48px; color:#fff; text-align:right;
+}
+.hero h1 {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:52px; font-weight:800;
+}
+.section { margin-top:56px; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.card { background:#fff; padding:24px; border-radius:10px; }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Technician<br>Training</h1>
+      <p>
+        Hands‑on training for field and service technicians
+        focused on troubleshooting, maintenance, and safety.
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Technician Learning Areas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Equipment & Systems</h3>
+        <p>Refrigeration systems, components, diagnostics.</p>
+      </div>
+      <div class="card">
+        <h3>Maintenance & Troubleshooting</h3>
+        <p>Preventive maintenance, fault isolation, repair.</p>
+      </div>
+      <div class="card">
+        <h3>Safety & Compliance</h3>
+        <p>Electrical safety, compliance, best practices.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
