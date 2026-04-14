@@ -642,7 +642,7 @@ const dots     = document.querySelectorAll('.sdot');
 const bar      = document.getElementById('sliderProgress');
 const slideNum = document.getElementById('slideNum');
 let cur = 0, pct = 0, ticker = null;
-const DUR = 5500, TICK = 60;
+const DUR = 8000, TICK = 60;
 
 function goTo(n) {
   slides[cur].classList.remove('active');
@@ -683,9 +683,9 @@ function animateCount(el, target, suffix, duration) {
 
 // ★ Update these numbers to match your real Docebo data
 const statsData = [
-  { id: 'statCourses',    target: 150,  suffix: '+' },
+  { id: 'statCourses',    target: 500,  suffix: '+' },
   { id: 'statCompleted',  target: 2400, suffix: '+' },
-  { id: 'statLearners',   target: 340,  suffix: '+' },
+  { id: 'statLearners',   target: 1000,  suffix: '+' },
   { id: 'statCompliance', target: 97,   suffix: '%' },
 ];
 
